@@ -1,0 +1,24 @@
+{
+  "name": "lake-of-kalandra",
+  "version": "1.0.0",
+  "description": "Lake of Kalandra tablet solver",
+  "main": "client/src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jake-manning/lake-of-kalandra.git"
+  },
+  "keywords": [
+    "PoE",
+    "Path of Exile",
+    "Lake of Kalandra"
+  ],
+  "author": "Jake Manning",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/jake-manning/lake-of-kalandra/issues"
+  },
+  "homepage": "https://github.com/jake-manning/lake-of-kalandra#readme"
+}
