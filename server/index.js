@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const path = require('path');
+const router = require('./routes');
 
 require('dotenv').config();
 
@@ -10,6 +11,7 @@ const PORT = process.env.PORT;
 
 app.use(bodyParser.json());
 app.use(morgan('tiny'));
+app.use(router);
 
 app.use(express.static(path.join(__dirname, '/../client/dist')));
 

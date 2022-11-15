@@ -1,0 +1,1 @@
+exports.solution = require('./solution');

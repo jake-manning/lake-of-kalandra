@@ -16,6 +16,6 @@ const InputTablet = ({ tablet }) => {
       )})}
     </div>
   )
-}
+};
 
 export default InputTablet;

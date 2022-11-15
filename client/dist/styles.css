@@ -1,7 +1,16 @@
+h1 {
+  text-align: center;
+}
+
 .row {
   display: flex;
   margin-bottom: 5px;
   gap: 5px;
+}
+
+.tablets {
+  display: flex;
+  justify-content: space-around;
 }
 
 .tile {
