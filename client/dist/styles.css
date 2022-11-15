@@ -1,0 +1,12 @@
+.row {
+  display: flex;
+  margin-bottom: 5px;
+  gap: 5px;
+}
+
+.tile {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(95, 95, 221);
+  cursor: pointer;
+}
