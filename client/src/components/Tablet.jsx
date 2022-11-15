@@ -22,9 +22,9 @@ const Tablet = ({ tablet }) => {
           <div className="row">
             {row.map((tile, tileIndex) => {
               if (!tile) {
-                return <div className="tile" id={`${5 * rowIndex + tileIndex + 1}`}></div>
+                return <div className="tile" id={`${5 * rowIndex + tileIndex + 1}`} key={`input:${5 * rowIndex + tileIndex + 1}`}></div>
               }
-              return <div className="tile active" id={`${5 * rowIndex + tileIndex + 1}`}></div>
+              return <div className="tile active" id={`${5 * rowIndex + tileIndex + 1}`} key={`input:${5 * rowIndex + tileIndex + 1}`}></div>
             })}
           </div>
       )})}
