@@ -3,15 +3,16 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: "development",
-  entry: path.join(__dirname, "client/src", "index.js"),
+  entry: path.join(__dirname, "client/src", "index.jsx"),
+  devtool: 'source-map',
   output: {
-    filename: 'bundle.js',
     path: path.resolve(__dirname, "client/dist"),
+    filename: 'bundle.js'
   },
   module: {
     rules: [
       {
-        test: /\.?js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
@@ -22,9 +23,12 @@ module.exports = {
       },
     ]
   },
+  resolve: {
+    extensions: ['*', '.js', '.jsx'],
+  },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, "client/src", "index.html"),
-    }),
+      template: path.join(__dirname, "client/dist", "index.html"),
+    })
   ]
 } 
