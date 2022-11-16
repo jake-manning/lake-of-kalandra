@@ -18,10 +18,17 @@ const App = () => {
   const inputTileClickHandler = (e) => {
     let id = e.currentTarget.id;
     let tile = document.getElementById(id);
+    let tabletCopy = [...tablet];
+    let rowNumber = Math.floor(id / 5);
+    let columnNumber = id % 5;
     if (tile.classList.contains('active')) {
       tile.classList.remove('active');
+      tabletCopy[rowNumber][columnNumber] = 0;
+      setTablet(tabletCopy);
     } else if (!tile.classList.contains('active')) {
       tile.classList.add('active');
+      tabletCopy[rowNumber][columnNumber] = 1;
+      setTablet(tabletCopy);
     }
   };
 

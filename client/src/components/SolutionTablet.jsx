@@ -11,16 +11,16 @@ const SolutionTablet = ({ solution }) => {
                 return (
                   <div 
                     className="tile" 
-                    id={`solution:${5 * rowIndex + tileIndex + 1}`} 
-                    key={`solution:${5 * rowIndex + tileIndex + 1}`}>
+                    id={`solution:${5 * rowIndex + tileIndex}`} 
+                    key={`solution:${5 * rowIndex + tileIndex}`}>
                   </div>
                 )
               }
               return (
                 <div 
                   className="tile active" 
-                  id={`solution:${5 * rowIndex + tileIndex + 1}`} 
-                  key={`solution:${5 * rowIndex + tileIndex + 1}`}>
+                  id={`solution:${5 * rowIndex + tileIndex}`} 
+                  key={`solution:${5 * rowIndex + tileIndex}`}>
                 </div>
               )
             })}

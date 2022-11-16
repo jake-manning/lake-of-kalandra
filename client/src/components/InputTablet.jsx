@@ -12,8 +12,8 @@ const InputTablet = ({ tablet, tileClickHandler }) => {
                   <div 
                     onClick={(e) => tileClickHandler(e)} 
                     className="tile" 
-                    id={`${5 * rowIndex + tileIndex + 1}`} 
-                    key={`input:${5 * rowIndex + tileIndex + 1}`}>
+                    id={`${5 * rowIndex + tileIndex}`} 
+                    key={`input:${5 * rowIndex + tileIndex}`}>
                   </div>
                 )
               }
@@ -21,8 +21,8 @@ const InputTablet = ({ tablet, tileClickHandler }) => {
                 <div 
                   onClick={(e) => tileClickHandler(e)} 
                   className="tile active" 
-                  id={`${5 * rowIndex + tileIndex + 1}`} 
-                  key={`input:${5 * rowIndex + tileIndex + 1}`}>
+                  id={`${5 * rowIndex + tileIndex}`} 
+                  key={`input:${5 * rowIndex + tileIndex}`}>
                 </div>
               )
             })}
