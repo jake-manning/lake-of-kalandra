@@ -1,5 +1,20 @@
+@font-face {
+  font-family: "fontin";
+  src: url('./Fontin-Regular.woff') format('woff');
+}
+
+* {
+  font-family: "fontin";
+}
+
 h1 {
+  font-family: "fontin";
   text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
 }
 
 .row {

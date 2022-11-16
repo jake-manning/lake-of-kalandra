@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import SolutionTablet from './SolutionTablet';
 import InputTablet from './InputTablet';
+import SolutionTablet from './SolutionTablet';
+import SolveButton from './SolveButton';
 
 const App = () => {
   const [tilesToAdd, setTilesToAdd] = useState(0);
@@ -14,6 +15,9 @@ const App = () => {
       <div className="tablets">
         <InputTablet tablet={tablet} />
         <SolutionTablet solution={solution} />
+      </div>
+      <div className="button-container">
+        <SolveButton />
       </div>
     </div>
   )
