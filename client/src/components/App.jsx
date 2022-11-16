@@ -3,6 +3,7 @@ import $ from 'jquery';
 import InputTablet from './InputTablet';
 import SolutionTablet from './SolutionTablet';
 import SolveButton from './SolveButton';
+import ResetButton from './ResetButton';
 
 const App = () => {
   const [tilesToAdd, setTilesToAdd] = useState(0);
@@ -20,6 +21,11 @@ const App = () => {
     }
   };
 
+  const resetButtonClickHandler = () => {
+    setSolution([[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]);
+    setTablet([[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]);
+  }
+
   return (
     <div>
       <h1>Lake of Kalandra Tablet Solver</h1>
@@ -29,6 +35,7 @@ const App = () => {
       </div>
       <div className="button-container">
         <SolveButton />
+        <ResetButton clickHandler={resetButtonClickHandler}/>
       </div>
     </div>
   )

@@ -12,16 +12,17 @@ h1 {
   color: white;
   font-family: "fontin";
   text-align: center;
+  margin-top: 50px;
   margin-bottom: 50px;
 }
 
 .button-container {
   display: flex;
   justify-content: center;
+  gap: 10px;
 }
 
 button {
-  /* background-color: #431a06; */
   background-image: linear-gradient(to bottom, #251102 0%, #411000 51%, #4e2b18 100%);
   font-family: "fontin";
   cursor: pointer;
@@ -46,13 +47,6 @@ button:hover {
   justify-content: center;
   gap: 180px;
 }
-
-/* .tile {
-  width: 30px;
-  height: 30px;
-  background-color: rgb(95, 95, 221);
-  cursor: pointer;
-} */
 
 .tile {
   width: 50px;
