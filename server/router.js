@@ -1,5 +1,6 @@
 const router = require('express').Router();
+const { controllers } = require('./controllers');
 
-router.get('/solution', controllers.solution);
+router.post('/solution', controllers.getSolution);
 
 module.exports = router;

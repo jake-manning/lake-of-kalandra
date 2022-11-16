@@ -1,8 +1,8 @@
 import React from 'react';
 
-const SolveButton = () => {
+const SolveButton = ({ clickHandler }) => {
   return (
-    <button>KRANGLE</button>
+    <button onClick={() => clickHandler()}>KRANGLE</button>
   )
 };
 

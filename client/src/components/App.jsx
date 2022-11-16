@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import $ from 'jquery';
+import axios from 'axios';
 import InputTablet from './InputTablet';
 import SolutionTablet from './SolutionTablet';
 import SolveButton from './SolveButton';
 import ResetButton from './ResetButton';
 
 const App = () => {
+  const [account, setAccount] = useState('');
+  const [character, setCharacter] = useState('');
   const [tilesToAdd, setTilesToAdd] = useState(0);
   const [tilesToSwap, setTilesToSwap] = useState(0);
   const [solution, setSolution] = useState(
@@ -32,6 +34,21 @@ const App = () => {
     }
   };
 
+  const submitButtonClickHandler = () => {
+    axios.post('http://localhost:3000/solution', {
+      "account": account,
+      "character": character,
+      "tablet": tablet
+    })
+      .then((res) => {
+        setSolution(res.data.solution);
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+  };
+
   const resetButtonClickHandler = () => {
     setSolution(
       [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]
@@ -39,7 +56,7 @@ const App = () => {
     setTablet(
       [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]
     );
-  }
+  };
 
   return (
     <div>
@@ -49,7 +66,7 @@ const App = () => {
         <SolutionTablet solution={solution} />
       </div>
       <div className="button-container">
-        <SolveButton />
+        <SolveButton clickHandler={submitButtonClickHandler}/>
         <ResetButton clickHandler={resetButtonClickHandler}/>
       </div>
     </div>

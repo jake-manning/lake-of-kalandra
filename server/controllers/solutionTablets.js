@@ -504,7 +504,7 @@ module.exports = {
       [1, 0, 1, 1, 1]
     ]
   ]
-}
+};
 
 // console.log(module.exports.solutionTablets.filter((array) => {
 //   let ones = 0;

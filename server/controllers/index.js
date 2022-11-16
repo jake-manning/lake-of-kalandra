@@ -1,1 +1,1 @@
-exports.solution = require('./solution');
+exports.controllers = require('./controllers');
