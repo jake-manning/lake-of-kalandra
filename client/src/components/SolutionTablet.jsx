@@ -8,9 +8,21 @@ const SolutionTablet = ({ solution }) => {
           <div className="row" key={`solutionRow:${rowIndex + 1}`}>
             {row.map((tile, tileIndex) => {
               if (!tile) {
-                return <div className="tile" id={`${5 * rowIndex + tileIndex + 1}`} key={`solution:${5 * rowIndex + tileIndex + 1}`}></div>
+                return (
+                  <div 
+                    className="tile" 
+                    id={`solution:${5 * rowIndex + tileIndex + 1}`} 
+                    key={`solution:${5 * rowIndex + tileIndex + 1}`}>
+                  </div>
+                )
               }
-              return <div className="tile active" id={`${5 * rowIndex + tileIndex + 1}`} key={`solution:${5 * rowIndex + tileIndex + 1}`}></div>
+              return (
+                <div 
+                  className="tile active" 
+                  id={`solution:${5 * rowIndex + tileIndex + 1}`} 
+                  key={`solution:${5 * rowIndex + tileIndex + 1}`}>
+                </div>
+              )
             })}
           </div>
       )})}

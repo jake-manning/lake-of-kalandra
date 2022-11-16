@@ -3,13 +3,16 @@
   src: url('./Fontin-Regular.woff') format('woff');
 }
 
-* {
+body {
+  background-color: rgba(0, 0, 0, 0.93);
   font-family: "fontin";
 }
 
 h1 {
+  color: white;
   font-family: "fontin";
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .button-container {
@@ -17,20 +20,83 @@ h1 {
   justify-content: center;
 }
 
+button {
+  /* background-color: #431a06; */
+  background-image: linear-gradient(to bottom, #251102 0%, #411000 51%, #4e2b18 100%);
+  font-family: "fontin";
+  cursor: pointer;
+  color: #d59d6f;
+  width: 200px;
+  font-size: 25px;
+  margin-top: 25px;
+}
+
+button:hover {
+  box-shadow: 3px 3px 3px grey;
+}
+
 .row {
   display: flex;
-  margin-bottom: 5px;
-  gap: 5px;
+  margin-bottom: 20px;
+  gap: 20px;
 }
 
 .tablets {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 180px;
 }
 
-.tile {
+/* .tile {
   width: 30px;
   height: 30px;
   background-color: rgb(95, 95, 221);
   cursor: pointer;
+} */
+
+.tile {
+  width: 50px;
+  height: 50px;
+  background-color: #2d4f8a;
+  cursor: pointer;
+}
+
+.tile:hover:not(.active) {
+  box-shadow: 2px 2px 2px grey;
+}
+
+.tile.active {
+  position: relative;
+  width: 30px;
+  height: 50px;
+  background: #57626c;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.tile.active:before {
+  content: '';
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: -15px;
+  width: 0px;
+  height: 0px;
+  border-right: 15px solid #57626c;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+}
+
+.tile.active:after {
+  content: '';
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: -15px;
+  width: 0px;
+  height: 0px;
+  border-left: 15px solid #57626c;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
 }

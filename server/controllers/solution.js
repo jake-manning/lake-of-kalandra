@@ -2,18 +2,18 @@ const { solutionTablets } = require('./solutionTablets');
 
 module.exports = {
   findSolution: (inputTablet) => {
-    // count how many tiles input tablet would need to add to have 17 filled tiles
+    // count how many tiles input tablet needs to add for 17 filled tiles
     let tiles = 0;
     inputTablet.forEach((row) => {
       row.forEach((tile) => {
         if (tile === 1) {
           tiles++;
         }
-      })
+      });
     });
     let tilesToAdd = 17 - tiles;
     
-    // compare input tablet to each solution tablet and count number of tile differences
+    // compare input tablet to solution tablets and count number of tile differences
     let solutionTabletDifferences = {};
     for (let i = 0; i < solutionTablets.length; i++) {
       let differences = 0;
@@ -23,7 +23,7 @@ module.exports = {
           // console.log('input: ', inputTablet[j][k], 'solution: ', solutionTablets[i][j][k])
           if (inputTablet[j][k] !== solutionTablets[i][j][k]) {
             differences++;
-          };
+          }
         }
       }
       solutionTabletDifferences[i] = differences - tilesToAdd;
@@ -50,10 +50,10 @@ module.exports = {
   }
 };
 
-console.log(module.exports.findSolution([
-  [ 1, 1, 1, 1, 1 ],
-  [ 0, 0, 0, 0, 1 ],
-  [ 1, 1, 0, 1, 1 ],
-  [ 1, 1, 1, 1, 0 ],
-  [ 1, 0, 1, 1, 0 ]
-]))
+// console.log(module.exports.findSolution([
+//   [ 1, 1, 1, 1, 1 ],
+//   [ 0, 0, 0, 0, 1 ],
+//   [ 1, 1, 0, 1, 1 ],
+//   [ 1, 1, 1, 1, 0 ],
+//   [ 1, 0, 1, 1, 0 ]
+// ]))
