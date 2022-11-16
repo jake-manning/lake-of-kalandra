@@ -16,10 +16,11 @@ h1 {
   margin-bottom: 50px;
 }
 
-.button-container {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+p {
+  color: white;
+  font-size: 20px;
+  font-family: "fontin";
+  text-align: center;
 }
 
 button {
@@ -29,25 +30,40 @@ button {
   color: #d59d6f;
   width: 200px;
   font-size: 25px;
-  margin-top: 25px;
 }
 
 button:hover {
   box-shadow: 3px 3px 3px grey;
 }
 
+/* flex containers for all react components */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.solution-info-container {
+  display: flex;
+  justify-content: center;
+}
+
+.tablet-container {
+  display: flex;
+  justify-content: center;
+  gap: 180px;
+}
+
+/* style to set gridded tablet layout */
 .row {
   display: flex;
   margin-bottom: 20px;
   gap: 20px;
 }
 
-.tablets {
-  display: flex;
-  justify-content: center;
-  gap: 180px;
-}
-
+/* tile styles */
 .tile {
   width: 50px;
   height: 50px;
@@ -59,6 +75,7 @@ button:hover {
   box-shadow: 2px 2px 2px grey;
 }
 
+/* active tiles styles - hexagons */
 .tile.active {
   position: relative;
   width: 30px;
